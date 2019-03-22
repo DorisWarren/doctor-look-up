@@ -10,7 +10,9 @@ $(document).ready(function(){
   event.preventDefault();
   const symptom = $("#symptom-input-dead").val();
   const newSearch = new UserSearch(symptom);
-  console.log(newsearch);
+  console.log(newSearch);
   });
-$("")
+
+
+
 });

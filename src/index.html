@@ -23,18 +23,17 @@
       <div class="foundDoc">
         <h4>Search for Doctor</h4>
         <form id="doctor-form" >
-          <label for="doctor-input">Enter the first and last name of physician you are searching for:</label>
-          <input id="doctor-input" type="text" value="">
-          <button id="doc-button" class="btn btn-info" type="submit" name="button">Get Doc</button>
+          <label for="docNameInput">Enter Doctors First name</label>
+          <input id="docNameInput" type="text" name="" >
+          <label for="docLastNameInput">Enter Doctors Last name </label>
+          <input id="docLastNameInput" type="text" name="" >
+          <button id="hot-doc-button" class="btn btn-info" type="submit" name="button">Get Doc</button>
         </form>
       </div>
 
       <div class="results">
-        <p id="first-name"></p>
-        <p id="last-name"></p>
-        <p id="address"></p>
-        <p id="number"></p>
-        <p id="open-appointment"></p>
+        <p class="doc-info"></p>
+        <p class="showErrors"></p>
       </div>
     </div>
   </body>
