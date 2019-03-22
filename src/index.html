@@ -7,25 +7,34 @@
   <body>
     <div class="container">
       <div class="findDoc">
-        <h1 class="doc" >Looking for a Doctor?</h1>
+        <h1 class="doc" >Doctor Look Up</h1>
         <h3 class"link"> <a href="https://betterdoctor.com/">Better Doctor</a></h3>
       </div>
 
-      <div class="search-for-doc">
-        <h3>Portland | Search for a doctor near you</h3>
+      <div class="search-doc">
+        <h3>Portland | Search for a doctor </h3>
         <form id="symptom-form">
-          <label for="search-input">Enter symptoms:</label>
-          <input  id="search-input"type="text" name="" value="">
-          <button type="submit" class="btn btn-info"name="button">Search Doc</button>
+          <label for="symptom-input">Symptoms:</label>
+          <input  id="symptom-input-dead"type="text" name="" value="">
+          <button id="feeling-dead-button"type="submit" class="btn btn-info"name="button">Search</button>
         </form>
       </div>
 
       <div class="foundDoc">
         <h4>Search for Doctor</h4>
+        <form id="doctor-form" >
+          <label for="doctor-input">Enter the first and last name of physician you are searching for:</label>
+          <input id="doctor-input" type="text" value="">
+          <button id="doc-button" class="btn btn-info" type="submit" name="button">Get Doc</button>
+        </form>
       </div>
 
-      <div class="">
-
+      <div class="results">
+        <p id="first-name"></p>
+        <p id="last-name"></p>
+        <p id="address"></p>
+        <p id="number"></p>
+        <p id="open-appointment"></p>
       </div>
     </div>
   </body>

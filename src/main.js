@@ -2,12 +2,15 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import {DayPicker} from "./scripts.js";
+import {UserSearch} from "./scripts.js";
 
 
 $(document).ready(function(){
-  $("#dateForm").submit(function(event){
+  $("#feeling-dead-button").click(function(){
   event.preventDefault();
-
+  const symptom = $("#symptom-input-dead").val();
+  const newSearch = new UserSearch(symptom);
+  console.log(newsearch);
   });
+$("")
 });
