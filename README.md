@@ -6,7 +6,7 @@
 
 ### Description
 
-**JavaScript Week 2** An application built to help you find a doctor near you, to treat your issues!
+**JavaScript Week 2** An application built to help you find a doctor near you!
 
 ### Setup | Installations Requirments
 
