@@ -6,28 +6,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="findDoc">
+      <div id="header">
         <h1 class="doc" >Doctor Look Up</h1>
         <h3 class"link"> <a href="https://betterdoctor.com/">Better Doctor</a></h3>
       </div>
 
-      <div class="search-doc">
-        <h3>Portland | Search for a doctor </h3>
+      <div class="search-hot-doc">
+        <h3> Search for a Doctor </h3>
         <form id="symptom-form">
-          <label for="symptom-input">Symptoms:</label>
+          <label for="symptom-input">Enter Symptoms:</label>
           <input  id="symptom-input-dead"type="text" name="" value="">
           <button id="feeling-dead-button"type="submit" class="btn btn-info"name="button">Search</button>
         </form>
       </div>
 
-      <div class="foundDoc">
-        <h4>Search for Doctor</h4>
+      <div class="findDoc">
+        <h4>Seach Specific Doctor</h4>
         <form id="doctor-form" >
           <label for="docNameInput">Enter Doctors First name</label>
-          <input id="docNameInput" type="text" name="" >
+          <input id="docNameInput" type="text" value="" ><br>
           <label for="docLastNameInput">Enter Doctors Last name </label>
-          <input id="docLastNameInput" type="text" name="" >
-          <button id="hot-doc-button" class="btn btn-info" type="submit" name="button">Get Doc</button>
+          <input id="docLastNameInput" type="text" value="" ><br>
+          <button id="hot-doc-button" class="btn btn-info" type="submit" name="button">Find Doc!</button>
         </form>
       </div>
 
