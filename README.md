@@ -18,9 +18,9 @@
   * _$ npm run start_
 * _Application requires API key._
   * _Instructions_
-    _Create a file named .env in root directory_
-    _Sign up for Better Doctor API to request a key_
-    _Place key in .env file as shown: exports.apiKey=KEYGOESHERE_
+    *  _Create a file named .env in root directory_
+    *  _Sign up for Better Doctor API to request a key_
+    *  _Place key in .env file as shown: exports.apiKey=KEYGOESHERE_
 
 ### Specs
 * _Searching for Doctors that specialize on a specific illness._
