@@ -23,7 +23,7 @@
     *  _Place key in .env file as shown: exports.apiKey=KEYGOESHERE_
 
 ### Specs
-* _Searching for Doctors that specialize on a specific illness._
+* _Searching for Doctors that specialize in a specific illness._
   * _Input: Flu / Colds_
   * _Output: Doctor that specializes in Flu or Sore Throats_
 
