@@ -5,36 +5,32 @@ import './styles.css';
 import {UserSearch} from "./scripts.js";
 
 $(document).ready(function() {
-  // $('.results').hide();
-  let newSearch = new UserSearch();
-  $('#feeling-dead-button').click(function(){
+  $('#symptom-form').submit(function(event){
     event.preventDefault();
-    let symptom = $('#symptom-input-dead').val();
-    let promise = newSearch.searchSymptoms(symptom);
+    let symptom = $('#symptomDead').val();
+    let docLastName = $('#docLastName').val();
+    $('#symptomDead').val("");
+    $('#docLastName').val("");
+
+    let newSearch = new UserSearch();
+    let promise = newSearch.searchSymptoms(symptom,docLastName);
 
     promise.then(function(response) {
-      $('.doc-info').text("");
+      $('#doc-info').text("");
       let body = JSON.parse(response);
-      // let noDocs = true;
-      // // for(let i = 0; i < 10; i ++){
-      //   for (let j = 0; j < body.data[i].specialties.length; j++) {
-      //     if (body.data[i].specialties[j].description.match(symptom)) {
-      //       console.log(body.data[i]);
-            $('.doc-info').append('<img src="' + body.data[i].profile.image_url + '">');
-            $('.doc-info').append('<p>' + body.data[i].practices[0].name + " " + body.data[i].practices[0].visit_address.street + " " + body.data[i].practices[0].visit_address.city + "," + body.data[i].practices[0].visit_address.state + " " + "Phone Number:" + " " + body.data[i].practices[0].phones[0].number + " " + "New patient availability:" + body.data[i].practices[0].accept_new_patients + '</p>');
-            // noDocs = false;
-          }
+      if (body.data.length === 0){
+        $('#doc-info').text("Sorry, There are no doctors that match your request.");
+      } else {
+        for(var i = 0; i < 10; i ++){
+            $('#doc-info').append('<img src="' + body.data[i].profile.image_url + '">');
+            $('#doc-info').append(`Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} <br> Street: ${body.data[i].practices[0].visit_address.street} <br> ${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state} ${body.data[i].practices[0].visit_address.zip} <br> Phone Number: ${body.data[i].practices[0].phones[0].number} <br> <br>`);
         }
       }
-      if (noDocs) {
-        $('.doc-info').text("Sorry, There are no doctors that match your request.");
-      }
-
     },
     function(error){
       $('.showErrors').text('There was an error processing your request: ${error.message}');
     });
-    $('.results').show();
+    // $('.results').show();
   });
   // $('#hot-doc-button').click(function(){
   //   event.preventDefault();
