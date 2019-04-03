@@ -1,8 +1,6 @@
 export class UserSearch{
 
-  // constructor() {
-  // }
-  searchSymptoms(docLastName,symptomDead){
+  searchSymptoms(symptomDead,docFirstName,docLastName){
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       let url = `https://api.betterdoctor.com/2016-03-01/doctors?last_name=${docLastName}&query=${symptomDead}&location=or-portland&sort=best-match-asc&skip=0&limit=10&user_key=${process.env.exports.apiKey}`;
@@ -18,6 +16,9 @@ export class UserSearch{
     });
   }
 }
+//
+// 37.773,-122.413,100
+// 37.773,-122.413
   // searchDoctors(){
   //    return new Promise(function(resolve, reject) {
   //      let request = new XMLHttpRequest();
@@ -33,4 +34,3 @@ export class UserSearch{
   //      request.send();
   //    });
   //  }
- 
