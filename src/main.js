@@ -22,8 +22,8 @@ $(document).ready(function() {
         $('#doc-info').text("Sorry, There are no doctors that match your request.");
       } else {
         for(var i = 0; i < 10; i ++){
-            $('#doc-info').append('<img src="' + body.data[i].profile.image_url + '">');
-            $('#doc-info').append(`Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} <br> Street: ${body.data[i].practices[0].visit_address.street} <br> ${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state} ${body.data[i].practices[0].visit_address.zip} <br> Phone Number: ${body.data[i].practices[0].phones[0].number} <br> <br>`);
+          $('#doc-info').append('<img src="' + body.data[i].profile.image_url + '">');
+          $('#doc-info').append(`Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} <br> Street: ${body.data[i].practices[0].visit_address.street} <br> ${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state} ${body.data[i].practices[0].visit_address.zip} <br> Phone Number: ${body.data[i].practices[0].phones[0].number} <br> <br>`) ;
         }
       }
     },
