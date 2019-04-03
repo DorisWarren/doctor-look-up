@@ -22,12 +22,12 @@ $(document).ready(function() {
             console.log(body.data[i]);
             $('.doc-info').append('<img src="' + body.data[i].profile.image_url + '">');
             $('.doc-info').append('<p>' + body.data[i].practices[0].name + " " + body.data[i].practices[0].visit_address.street + " " + body.data[i].practices[0].visit_address.city + "," + body.data[i].practices[0].visit_address.state + " " + "Phone Number:" + " " + body.data[i].practices[0].phones[0].number + " " + "New patient availability:" + body.data[i].practices[0].accept_new_patients + '</p>');
-            noDocs = false;
+            // noDocs = false;
           }
         }
       }
       if (noDocs) {
-        $('.doctor-info').text("Sorry, There are no doctors that match your request.");
+        $('.doc-info').text("Sorry, There are no doctors that match your request.");
       }
 
     },
@@ -56,7 +56,7 @@ $(document).ready(function() {
         }
       }
       if (noDocs) {
-        $('.doctor-info').text("Sorry, There are no doctors that match your request.");
+        $('.doc-info').text("Sorry, There are no doctors that match your request.");
       }
     },
     function(error){
