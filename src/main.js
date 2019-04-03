@@ -8,19 +8,20 @@ $(document).ready(function() {
   $('#symptom-form').submit(function(event){
     event.preventDefault();
     let symptom = $('#symptomDead').val();
-    let docFirstName = $('#docFirstName').val();
+    // let docFirstName = $('#docFirstName').val();
     let docLastName = $('#docLastName').val();
 
     $('#symptomDead').val("");
-    $('#docFirstName').val("");
+    // $('#docFirstName').val("");
     $('#docLastName').val("");
 
     let newSearch = new UserSearch();
-    let promise = newSearch.searchSymptoms(symptom,docFirstName,docLastName);
+    let promise = newSearch.searchSymptoms(symptom,docLastName);
 
     promise.then(function(response) {
       $('#doc-info').text("");
       let body = JSON.parse(response);
+      console.log(body);
       if (body.data.length === 0){
         $('#doc-info').text("Sorry, There are no doctors that match your request.");
       } else {
